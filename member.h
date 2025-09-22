@@ -22,12 +22,7 @@ public:
     length getHeight() const; //not implemented yet
     int getWeight() const;
 
-    // length operator+ (const length&);
-    //length operator+ (const int&);
     friend ostream& operator<< (ostream&, const member&);
-    //friend length operator+(int lhs, const length& rhs);
-
-    // length normalize(length&); // want to alter the value of temp object, use "&"
 };
 
 #endif
