@@ -1,0 +1,49 @@
+Discuss the following questions for Task 1:
+
+[LP] What constructors did you need to use? Is one constructor enough?
+One constructor is not enough, as there are three different cases of parameters when creating an object. 
+I have used 3 different constructors, one without parameters, one with feet as parameter. and the other with both feet and inches as parameters. 
+
+[HP] What is the difference between lines 5 and 6? Do you need special implementation to support line 6?
+The difference between lines 5 and 6 is that there is chaining of the << operator. There is no special implementation needed to support line 6
+as the overloaded << function returns a reference to the cout object, which is then passed back to the function again as a parameter to be acted 
+upon by the object on the right. The process continues until a ; is reached.
+
+[HP] Do you need to overload the assignment operator to support any the above operations?
+No, the assignment operator is not used with objects of classes.
+
+[HP] What did you need to do to support line 8? What would happen if you tried cout << inches + h3 instead?
+I created another overloaded + operator function that takes an integer as parameter and returns a "length" object . 
+cout << inches + h3 would not work as that would require another overloaded + operator function that is declared as a friend
+function of the class that takes an int and the length class as parameters. 
+
+Discuss the following questions for Task 2:
+
+[LP] What constructors did you need to use? Is one constructor enough?
+For task 2, I used two constructors: a default constructor with no parameters and another with an integer as a parameter for initialization with memberID.
+
+[HP] Do you need to overload the assignment operator for the length class to support line 7? Why or why not?
+I do not need to overload the assignment operator because assignment operators can be used to equate objects.
+
+[HP] Did you need to do any input validation to support lines 3 and 4? What about line 7?
+Yes, for line 3 and line 4, I have done input validation by asking the user whether they want to normalize the length if inches of > 11 was set as a parameter.
+In line 7, I did input validation by automatically normalizing inches in the length constructor. 
+
+Discuss the following questions for Task 3:
+
+[LP] What constructors did you need to use? Is one constructor enough?
+I used three constructors: One without parameters, one with an int parameter for initialization with minute, and another with two int parameters for initialization
+with hour and minute.
+
+[HP] What is the difference between lines 5 and 6? Do you need special implementation to support line 6?
+The difference between lines 5 and 6 is that there is chaining of the << operator. There is no special implementation needed to support line 6
+as the overloaded << function returns a reference to the cout object, which is then passed back to the function again as a parameter to be acted 
+upon by the object on the right. The process continues until a ; is reached.
+
+Discuss the following questions for Task 4:
+
+[HP] What constructors did you need to use? Is one constructor enough?
+Yes, only one constructor without parameters is needed.
+
+[HP] Do you need to overload the assignment operator for the Time class to support line 4? Why or why not?
+I do not need to overload the assignment operator because assignment operators can be used to equate objects.
